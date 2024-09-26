@@ -1,9 +1,18 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdCloseCircle } from "react-icons/io";
 const logoJungleGym = require("../assets/logoJungleGym.png");
 
 function Navigation() {
+  const style: React.CSSProperties = {
+    backgroundColor: "#FFE75F"
+  };
+
+  const [open, setOpen] = useState(false);
+
   return (
     <Navbar expand="lg" className="w-full bg-black" fixed="top" variant="dark">
       <Container className="flex justify-between xl:gap-40">
@@ -14,7 +23,17 @@ function Navigation() {
             alt="Logo jungle gym"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          bsPrefix="border-0 my-lg:hidden"
+          aria-controls="basic-navbar-nav"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? (
+            <IoMdCloseCircle className="text-yellow-brand h-10 w-9" />
+          ) : (
+            <RxHamburgerMenu className="text-white h-10 w-9" />
+          )}
+        </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="flex justify-end w-full text-sm">
             <Nav.Link className="text-white text-sm" href="#home">
