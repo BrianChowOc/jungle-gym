@@ -4,11 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens: {
-      'max-lg': {'max': '1024px'},
-      'max-sm': {'max': '640px'},
+    extend: {
+        screens: {
+      'my-lg': '992px',
     },
-    extend: {},
+      colors: {
+        'yellow': {
+          brand: '#faff02',
+          footer: '#FFE75F'
+        },
+      },
+    },
   },
   plugins: [],
 }

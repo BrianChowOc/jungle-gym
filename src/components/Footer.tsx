@@ -4,17 +4,9 @@ import { BsGeoAlt } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const footerStyle: React.CSSProperties = {
-    backgroundColor: "#FFE75F",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    width: "100%"
-  };
-
   return (
-    <footer style={footerStyle}>
-      <div className="flex flex-wrap justify-around min-h-20 gap-4 p-3">
+    <footer className=" bg-yellow-footer bottom-0 w-full">
+      <div className="flex flex-wrap justify-around  gap-4 p-3">
         <div className="flex items-center flex-col">
           <div className="flex items-center gap-2">
             <MdOutlineAccessTime className="h-6 w-6" />
@@ -40,7 +32,7 @@ function Footer() {
           <div className="text-sm">06 82 45 48 28</div>
         </div>
       </div>
-      <div className="flex items-center justify-center flex-col bg-black h-24 text-white text-sm pt-2">
+      <div className="flex items-center justify-center flex-col bg-black  text-white text-sm pt-2">
         <p className="flex gap-2">
           <a className="no-underline text-white text-sm" href={"#plansite"}>
             Plan du site
