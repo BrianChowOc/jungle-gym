@@ -7,18 +7,19 @@ import { IoMdCloseCircle } from "react-icons/io";
 const logoJungleGym = require("../assets/logoJungleGym.png");
 
 function Navigation() {
-  const style: React.CSSProperties = {
-    backgroundColor: "#FFE75F"
-  };
-
   const [open, setOpen] = useState(false);
 
   return (
-    <Navbar expand="lg" className="w-full bg-black" fixed="top" variant="dark">
+    <Navbar
+      expand="lg"
+      className="fixed w-full bg-black sm:h-20 left-0 top-0 h-14"
+      fixed="top"
+      variant="dark"
+    >
       <Container className="flex justify-between xl:gap-40">
         <Navbar.Brand href="#home">
           <img
-            className="sm:h-16 sm:w-64 h-12 w-52"
+            className="w-32 sm:w-52"
             src={logoJungleGym}
             alt="Logo jungle gym"
           />
@@ -29,13 +30,13 @@ function Navigation() {
           onClick={() => setOpen(!open)}
         >
           {open ? (
-            <IoMdCloseCircle className="text-yellow-brand h-10 w-9" />
+            <IoMdCloseCircle className="text-yellow-brand h-7 w-6 sm:h-10 sm:w-9" />
           ) : (
-            <RxHamburgerMenu className="text-white h-10 w-9" />
+            <RxHamburgerMenu className="text-white h-7 w-6 sm:h-10 sm:w-9" />
           )}
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="flex justify-end w-full text-sm">
+          <Nav className="flex justify-end w-full text-sm bg-black">
             <Nav.Link className="text-white text-sm" href="#home">
               SALLE DE SPORT
             </Nav.Link>
