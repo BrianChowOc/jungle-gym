@@ -8,10 +8,11 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <div>
+    <div className="flex flex-col h-screen w-screen">
       <Header />
-      <main className="mt-20">{children}</main>
-      <Footer />
+      <div className="my-lg:h-[60px] md:h-12 h-10 "></div>
+      <main className="grow">{children}</main>
+      {/* <Footer /> */}
     </div>
   );
 }

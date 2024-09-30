@@ -8,23 +8,55 @@ import Lottie from "lottie-react";
 import arrowRight from "../assets/arrowRight.json";
 const logoJungleGym = require("../assets/logoJungleGym.png");
 
+const data = [
+  { name: "SALLE DE SPORT", href: "#" },
+  { name: "PLANNING", href: "#" },
+  { name: "ABONNEMENTS", href: "#" },
+  { name: "MMA", href: "#" },
+  { name: "STREET DANCE", href: "#" },
+  { name: "COURS CO", href: "#" },
+  { name: "MASSAGE", href: "#" },
+  { name: "CONTACT", href: "#" }
+];
+
+function NavElem({ title, href }: { title: string; href: string }) {
+  return (
+    <Nav.Link
+      bsPrefix="flex items-center no-underline"
+      className=" text-white "
+      href={href}
+    >
+      <div className="flex justify-start w-40 pl-5 my-lg:w-auto">{title}</div>
+      <Lottie
+        className="h-12 w-12 my-lg:hidden"
+        animationData={arrowRight}
+        loop={true}
+        autoplay
+      />
+    </Nav.Link>
+  );
+}
+
 function Navigation() {
   const [open, setOpen] = useState(false);
+
+  const styleContainer = {
+    maxWidth: "initial"
+  };
 
   return (
     <Navbar
       expand="lg"
-      className="fixed w-full bg-black sm:h-20 left-0 top-0 h-14"
+      className="fixed flex w-full left-0 top-0 p-0 my-lg:h-[60px] bg-black"
       fixed="top"
       variant="dark"
     >
-      <Container className="flex justify-between xl:gap-40 px-0">
-        <Navbar.Brand href="#home">
-          <img
-            className="w-32 sm:w-52 ml-5"
-            src={logoJungleGym}
-            alt="Logo jungle gym"
-          />
+      <Container style={styleContainer} className="w-full h-full m-0 p-0">
+        <Navbar.Brand
+          href="#home"
+          className="flex items-center h-full sm:min-w-40 w-32 ml-5"
+        >
+          <img src={logoJungleGym} alt="Logo jungle gym" />
         </Navbar.Brand>
         <Navbar.Toggle
           bsPrefix="border-0 my-lg:hidden mr-5"
@@ -39,100 +71,12 @@ function Navigation() {
         </Navbar.Toggle>
         <Navbar.Collapse
           id="basic-navbar-nav"
-          className="bg-black w-full py-3 "
+          className="flex justify-start my-lg:justify-end  my-lg:pr-6"
         >
-          <Nav className="items-start pl-5 w-full text-xl  my-lg:flex-row">
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className=" text-white"
-              href="#home"
-            >
-              <div className=" w-2/4">SALLE DE SPORT</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className="text-white "
-              href="#planning"
-            >
-              <div className=" w-2/4">PLANNING</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className="text-white "
-              href="#mma"
-            >
-              <div className=" w-2/4">MMA</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className="text-white "
-              href="#streetdance"
-            >
-              <div className=" w-2/4">STREET DANCE</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className="text-white "
-              href="#coursco"
-            >
-              <div className=" w-2/4">COURS CO</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className="text-white "
-              href="#massage"
-            >
-              <div className=" w-2/4">MASSAGE</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
-            <Nav.Link
-              bsPrefix="flex items-center text-xl no-underline justify-around w-full"
-              className="text-white "
-              href="#contact"
-            >
-              <div className=" w-2/4">CONTACT</div>
-              <Lottie
-                className="h-12 w-12"
-                animationData={arrowRight}
-                loop={true}
-                autoplay
-              />
-            </Nav.Link>
+          <Nav className="text-sm my-lg:gap-3">
+            {data.map((value, key) => {
+              return <NavElem key={key} title={value.name} href={value.href} />;
+            })}
           </Nav>
         </Navbar.Collapse>
       </Container>
