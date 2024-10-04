@@ -7,7 +7,7 @@ function HeroSection() {
   }
 
   return (
-    <section className="relative flex flex-col text-white h-full w-full justify-center bg-red-300">
+    <section className="relative flex flex-col text-white w-full justify-center h-[242px] sm:h-[369px] bg-red-400">
       <video
         className="absolute w-full h-full object-cover"
         id="videoHero"
@@ -20,22 +20,25 @@ function HeroSection() {
         <source src="/heroSectionVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute flex flex-col items-center md:items-start md:text-left w-full h-full justify-center gap-9 p-12 ">
-        <h1>
-          <span>LIBÉREZ VOTRE </span>
+      <div className="absolute flex flex-col py-9 px-6 md:items-start md:text-left w-full h-full sm:justify-around ">
+        <h1 className="flex text-base sm:text-4xl">
+          <span>LIBÉREZ VOTRE &nbsp;</span>
+          <span></span>
           <span className="text-yellow-brand">FORCE SAUVAGE !</span>
         </h1>
-        <p className="text-xl w-3/4">
+        <p className="text-sm w-full sm:w-3/4 text-left sm:text-lg">
           Rejoignez notre famille et transformez vos défis en victoires : chaque
           rep, chaque série, chaque goutte de sueur vous rapproche de votre
           meilleure version.
         </p>
-        <a
-          href={"#visite"}
-          className="border-2 p-3 no-underline border-yellow-brand text-white text-xl"
-        >
-          VISITEZ-NOUS !
-        </a>
+        <div className="flex justify-end sm:justify-start">
+          <a
+            href={"#visite"}
+            className="flex text-sm sm:text-lg p-3 sm:p-4 items-center border-3 h-7 no-underline border-yellow-brand text-white"
+          >
+            VISITEZ-NOUS !
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -71,7 +71,7 @@ function Navigation() {
         </Navbar.Toggle>
         <Navbar.Collapse
           id="basic-navbar-nav"
-          className="flex justify-start my-lg:justify-end  my-lg:pr-6"
+          className="my-lg:justify-end my-lg:pr-6"
         >
           <Nav className="text-sm my-lg:gap-3">
             {data.map((value, key) => {
