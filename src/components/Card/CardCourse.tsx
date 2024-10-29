@@ -1,5 +1,3 @@
-import Card from "react-bootstrap/Card";
-
 export interface CardCourseProps {
   title: string;
   description: string;

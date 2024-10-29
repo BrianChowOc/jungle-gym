@@ -20,7 +20,7 @@ function HeroSection() {
         <source src="/heroSectionVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute flex flex-col py-9 px-6 md:items-start md:text-left w-full h-full sm:justify-around ">
+      <div className="absolute flex flex-col py-9 px-6 md:items-start md:text-left w-full h-full sm:justify-around mt-9">
         <h1 className="flex text-base sm:text-4xl">
           <span>LIBÉREZ VOTRE &nbsp;</span>
           <span></span>

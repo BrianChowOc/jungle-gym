@@ -41,8 +41,6 @@ const cardList = [
 ];
 
 function ListCardCourse() {
-  console.log("ici -> ", process.env.REACT_APP_PUBLIC_URL);
-
   return (
     <section
       className="relative flex justify-center"
