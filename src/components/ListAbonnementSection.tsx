@@ -99,9 +99,9 @@ const backgroundStyle = {
   backgroundColor: "#3b393f"
 };
 
-function ListAbonnement() {
+function ListAbonnementSection() {
   return (
-    <section style={backgroundStyle} className="sm:py-28">
+    <section style={backgroundStyle} className="pb-14 sm:py-28">
       <div className="flex items-center justify-center text-xl h-20 font-bold sm:hidden text-white">
         NOS ABONNEMENTS
       </div>
@@ -142,4 +142,4 @@ function ListAbonnement() {
   );
 }
 
-export default ListAbonnement;
+export default ListAbonnementSection;
