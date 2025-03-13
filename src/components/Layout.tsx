@@ -12,7 +12,7 @@ function Layout({ children }: LayoutProps) {
       <Header />
       <div className="my-lg:h-[60px] md:h-12 h-10 "></div>
       <main className="grow">{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

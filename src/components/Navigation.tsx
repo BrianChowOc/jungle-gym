@@ -63,11 +63,11 @@ function Navigation() {
           aria-controls="basic-navbar-nav"
           onClick={() => setOpen(!open)}
         >
-          {open ? (
+          {/* {open ? (
             <IoMdCloseCircle className="text-yellow-brand h-7 w-6 sm:h-10 sm:w-9" />
           ) : (
             <RxHamburgerMenu className="text-white h-7 w-6 sm:h-10 sm:w-9" />
-          )}
+          )} */}
         </Navbar.Toggle>
         <Navbar.Collapse
           id="basic-navbar-nav"

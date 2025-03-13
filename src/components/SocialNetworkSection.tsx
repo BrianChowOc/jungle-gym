@@ -22,13 +22,13 @@ function SocialNetworkSection() {
               href="/"
               className="flex justify-center items-center bg-white h-10 w-10 rounded-sm"
             >
-              <FaFacebookF className="bg-white text-black h-5 w-5" />
+              {/* <FaFacebookF className="bg-white text-black h-5 w-5" /> */}
             </a>
             <a
               href="/"
               className="flex justify-center items-center bg-white h-10 w-10 rounded-sm"
             >
-              <TfiInstagram className="bg-white text-black h-5 w-5" />
+              {/* <TfiInstagram className="bg-white text-black h-5 w-5" /> */}
             </a>
           </div>
         </div>

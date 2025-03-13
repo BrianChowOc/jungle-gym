@@ -23,10 +23,11 @@ function CardInstagram({
         <div className="truncate">{description}</div>
         <div className="flex justify-around">
           <div className="flex items-center">
-            <FaHeart /> {likes}
+            {/* <FaHeart />  */}
+            {likes}
           </div>
           <div className="flex items-center">
-            <FaComment />
+            {/* <FaComment /> */}
             {comments}
           </div>
         </div>
